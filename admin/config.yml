@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Страницы"
+    files:
+      - label: "Главная"
+        name: "index"
+        file: "index.html"
+        editor:
+          preview: false
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+  - name: "docs"
+    label: "Документы"
+    files:
+      - label: "Landing Page Content"
+        name: "landing_page_content"
+        file: "landing_page_content.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Landing Page Design"
+        name: "landing_page_design"
+        file: "landing_page_design.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Landing Page Research"
+        name: "landing_page_research"
+        file: "landing_page_research.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Landing Report"
+        name: "landing_report"
+        file: "landing_report.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Google Maps Algorithms and Features"
+        name: "google_maps_algorithms_and_features"
+        file: "google_maps_algorithms_and_features.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Google Maps Case Studies"
+        name: "google_maps_case_studies"
+        file: "google_maps_case_studies.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Google Maps Optimization Guide"
+        name: "google_maps_optimization_guide"
+        file: "google_maps_optimization_guide.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Google Maps Optimization Tools"
+        name: "google_maps_optimization_tools"
+        file: "google_maps_optimization_tools.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Google Maps Optimization Trends"
+        name: "google_maps_optimization_trends"
+        file: "google_maps_optimization_trends.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
+      - label: "Optimization Strategy"
+        name: "optimization_strategy"
+        file: "optimization_strategy.md"
+        fields:
+          - { label: "Содержимое", name: "body", widget: "markdown" }
