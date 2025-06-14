@@ -39,7 +39,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// HubSpot form integration: fall back to local handler if the old form exists
+// Form submission handler with Formspree integration
 const registrationForm = document.getElementById('registrationForm');
 if (registrationForm) {
     registrationForm.addEventListener('submit', function(e) {
@@ -59,9 +59,20 @@ if (registrationForm) {
             return;
         }
 
-        alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время для подтверждения участия.');
-        this.reset();
-        console.log('Registration data:', data);
+        fetch('https://formspree.io/f/xvgrrpan', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время для подтверждения участия.');
+                registrationForm.reset();
+            } else {
+                alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+            }
+        }).catch(() => {
+            alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+        });
     });
 }
 
