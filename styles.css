@@ -736,9 +736,17 @@ section {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .pricing-card.featured {
         transform: none;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-day {
+        padding: 30px;
     }
 }
 
@@ -764,9 +772,109 @@ section {
         padding: 20px 32px;
         font-size: 1.1rem;
     }
-    
+
     section {
         padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .registration {
+        padding: 80px 0;
+    }
+
+    .radio-label {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 0 50px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .cta-button,
+    .cta-button.large {
+        width: 100%;
+    }
+
+    .day-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .program-day {
+        padding: 20px;
+    }
+
+    .radio-label {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .cta-button.large {
+        padding: 18px 28px;
+        font-size: 1rem;
+    }
+
+    .registration {
+        padding: 60px 0;
+    }
+
+    .radio-label {
+        padding: 8px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 12px;
     }
 }
 
