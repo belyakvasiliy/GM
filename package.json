@@ -1,0 +1,22 @@
+{
+  "name": "google-maps-workshop",
+  "version": "1.0.0",
+  "description": "Google Maps Workshop Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1",
+    "start": "npm run dev",
+    "build": "echo 'Static site - no build required'",
+    "serve": "npx http-server . -p 3000"
+  },
+  "keywords": [
+    "google-maps",
+    "workshop",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
