@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Спасибо за регистрацию - Google Maps Воркшоп</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .thank-you-page {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .thank-you-content {
+        background: white;
+        border-radius: 20px;
+        padding: 60px 40px;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .success-icon {
+        font-size: 4rem;
+        margin-bottom: 24px;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .thank-you-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1e3a8a;
+        margin-bottom: 16px;
+      }
+
+      .thank-you-message {
+        font-size: 1.2rem;
+        color: #6b7280;
+        line-height: 1.6;
+        margin-bottom: 40px;
+      }
+
+      .next-steps {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .next-steps h3 {
+        color: #1e3a8a;
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .step-number {
+        background: #f59e0b;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .step-text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+
+      .contact-info {
+        background: #fef3c7;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 32px;
+      }
+
+      .contact-info h4 {
+        color: #92400e;
+        margin-bottom: 12px;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        .thank-you-content {
+          padding: 40px 24px;
+        }
+
+        .thank-you-title {
+          font-size: 2rem;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thank-you-page">
+      <div class="thank-you-content">
+        <div class="success-icon">🎉</div>
+
+        <h1 class="thank-you-title">Ваша заявка принята!</h1>
+
+        <p class="thank-you-message">
+          Спасибо за регистрацию на воркшоп "Google Карты, которые приносят
+          клиентов"!<br />
+          Мы получили вашу заявку и свяжемся с вами в течение 2 часов для
+          подтверждения участия.
+        </p>
+
+        <div class="next-steps">
+          <h3>Что происходит дальше?</h3>
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">
+              <strong>Подтверждение участия:</strong> Наш менеджер свяжется с
+              вами по указанному телефону или email для подтверждения места и
+              уточнения деталей.
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">
+              <strong>Инструкции по оплате:</strong> Вы получите детальную
+              информацию о способах оплаты выбранного пакета участия.
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">
+              <strong>Доступ к воркшопу:</strong> За 24 часа до начала вы
+              получите ссылку на Zoom и все необходимые материалы.
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <h4>Вопросы? Мы всегда на связи!</h4>
+          <p><strong>Email:</strong> info@googlemapsworkshop.com</p>
+          <p><strong>Телефон:</strong> +1 (904) 562-9782</p>
+          <p><strong>Время работы:</strong> Пн-Пт 9:00-18:00 (EST)</p>
+        </div>
+
+        <div class="action-buttons">
+          <a href="index.html" class="cta-button secondary">
+            ← Вернуться на главную
+          </a>
+          <a
+            href="mailto:info@googlemapsworkshop.com"
+            class="cta-button primary"
+          >
+            Написать нам письмо
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Redirect to home page after 30 seconds if user doesn't interact
+      let redirectTimer = setTimeout(() => {
+        window.location.href = "index.html";
+      }, 30000);
+
+      // Cancel redirect if user interacts with the page
+      document.addEventListener("click", () => {
+        clearTimeout(redirectTimer);
+      });
+
+      document.addEventListener("scroll", () => {
+        clearTimeout(redirectTimer);
+      });
+
+      // Track thank you page view for analytics
+      if (typeof gtag !== "undefined") {
+        gtag("event", "page_view", {
+          page_title: "Thank You Page",
+          page_location: window.location.href,
+        });
+
+        gtag("event", "conversion", {
+          send_to: "AW-CONVERSION_ID/CONVERSION_LABEL",
+        });
+      }
+
+      console.log("Thank you page loaded at:", new Date().toISOString());
+    </script>
+  </body>
+</html>
