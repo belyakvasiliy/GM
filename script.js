@@ -39,36 +39,42 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Form submission
-document.getElementById('registrationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Simple validation
-    if (!data.name || !data.email || !data.phone || !data.plan) {
-        alert('Пожалуйста, заполните все обязательные поля');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-        alert('Пожалуйста, введите корректный email адрес');
-        return;
-    }
-    
-    // Show success message
-    alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время для подтверждения участия.');
-    
-    // Reset form
-    this.reset();
-    
-    // In a real application, you would send this data to your server
-    console.log('Registration data:', data);
-});
+// Form submission handler with Formspree integration
+const registrationForm = document.getElementById('registrationForm');
+if (registrationForm) {
+    registrationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+
+        if (!data.name || !data.email || !data.phone || !data.plan) {
+            alert('Пожалуйста, заполните все обязательные поля');
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(data.email)) {
+            alert('Пожалуйста, введите корректный email адрес');
+            return;
+        }
+
+        fetch('https://formspree.io/f/xvgrrpan', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                alert('Спасибо за регистрацию! Мы свяжемся с вами в ближайшее время для подтверждения участия.');
+                registrationForm.reset();
+            } else {
+                alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+            }
+        }).catch(() => {
+            alert('Произошла ошибка при отправке. Попробуйте еще раз.');
+        });
+    });
+}
 
 // Scroll animations
 function animateOnScroll() {
