@@ -316,55 +316,7 @@
                 <h2>Забронируйте Ваше Место на Воркшопе</h2>
                 <p>Заполните форму ниже, и мы свяжемся с вами для подтверждения участия</p>
                 
-                <form class="registration-form" id="registrationForm">
-                    <div class="form-group">
-                        <label for="name">Ваше имя *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Телефон *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="business">Тип бизнеса</label>
-                        <select id="business" name="business">
-                            <option value="">Выберите тип бизнеса</option>
-                            <option value="restaurant">Ресторан/Кафе</option>
-                            <option value="retail">Розничная торговля</option>
-                            <option value="services">Услуги</option>
-                            <option value="healthcare">Медицина</option>
-                            <option value="beauty">Красота/Спа</option>
-                            <option value="other">Другое</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="plan">Выберите пакет участия *</label>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="plan" value="basic" required>
-                                <span class="radio-custom"></span>
-                                Слушатель ($550)
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="plan" value="premium" required>
-                                <span class="radio-custom"></span>
-                                С Разбором и Стратегией ($1000)
-                            </label>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="cta-button primary large">
-                        Забронировать место
-                    </button>
-                </form>
+                <div id="hubspotForm"></div>
             </div>
         </div>
     </section>
@@ -379,7 +331,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Контакты</h4>
-                    <p>Email: info@googlemapsworkshop.com</p>
+                    <p>Email: info@wisdomseducation.com</p>
                     <p>Телефон: +1 (904) 562-9782</p>
                 </div>
             </div>
@@ -390,6 +342,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script defer src="https://js.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (window.hbspt) {
+                hbspt.forms.create({
+                    region: "na1",
+                    portalId: "YOUR_PORTAL_ID",
+                    formId: "YOUR_FORM_ID",
+                    target: "#hubspotForm"
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
